@@ -8,6 +8,8 @@
 * [[go/flowcontrol.md|Flow Control]]: If, for, switch, etc..
 * [[go/collections/collections.md|Collections]]: Array, Slice, Map
 * [[go/functions/index.md|Functions]]: Information about Functions, Function Types and Closures
-* [[go/structures.md|Structures]]: Info about Structures - users data types
+* [[go/struct_method_interface/index.md|Structures, Methods and Interfaces]]: Info about Structures, methods and Interfaces
+* [[go/packages.md|Packages]]: All about packages
+* [[go/concurrency/concurrency.md|Concurrency]]: Info about Concurrency in Go
 * [[go/sensitive_shit.md|Sensitive Shit]]: Деликатная хрень
 * [[go/todo.md|TODO]]: Вещи с которыми надо разбираться подробней
