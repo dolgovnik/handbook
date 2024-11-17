@@ -11,5 +11,6 @@
 * [[go/struct_method_interface/index.md|Structures, Methods and Interfaces]]: Info about Structures, methods and Interfaces
 * [[go/packages.md|Packages]]: All about packages
 * [[go/concurrency/concurrency.md|Concurrency]]: Info about Concurrency in Go
+* [[go/errors_handling.md|Errors]]: Errors Handling
 * [[go/sensitive_shit.md|Sensitive Shit]]: Деликатная хрень
 * [[go/todo.md|TODO]]: Вещи с которыми надо разбираться подробней
