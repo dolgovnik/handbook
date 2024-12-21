@@ -38,9 +38,9 @@ func main() {
 	names[1] = "Lifejacket"
 	names[2] = "Paddle"
 
-	fmt.Println(names)                    #["Kayak", "Lifejacket", "Paddle"]
-	fmt.Println("len:", len(names))       #len: 3
-	fmt.Println("cap:", cap(names))       #cap: 6
+	fmt.Println(names)                    // <-- ["Kayak", "Lifejacket", "Paddle"]
+	fmt.Println("len:", len(names))       // <-- len: 3
+	fmt.Println("cap:", cap(names))       // <-- cap: 6
 
 }
 ```
@@ -98,8 +98,8 @@ func main() {
 
     names[0] = "Canoe"
 
-	fmt.Println("names:", names)                    #names: [Canoe Lifejacket Paddle]
-	fmt.Println("appendedNames:", appendedNames)    #appendedNames: [Canoe Lifejacket Paddle Hat Gloves]
+	fmt.Println("names:", names)                    // <-- names: [Canoe Lifejacket Paddle]
+	fmt.Println("appendedNames:", appendedNames)    // <-- appendedNames: [Canoe Lifejacket Paddle Hat Gloves]
 }
 ```
 __Срезы__ `names` и `appendedNames` поддерживаются одним тем же __базовым массивом__
@@ -127,9 +127,9 @@ func main() {
 	
 	moreNames := []string {"Hat", "Gloves"}
 	
-	appendedNames := append(names, moreNames...)
+	appendedNames := append(names, moreNames...)    // <-- '...'  - это распаковка среза
 
-	fmt.Println("appendedNames:", appendedNames)    #appendedNames: [Canoe Lifejacket Paddle Hat Gloves]
+	fmt.Println("appendedNames:", appendedNames)    // <-- appendedNames: [Canoe Lifejacket Paddle Hat Gloves]
 }
 ```
 __!!!__ `...` обязательны чтобы `append` распаковал срез 
@@ -138,7 +138,7 @@ __!!!__ `...` обязательны чтобы `append` распаковал с
 ## == Срез из Массива ==
 ```
 products := [4]string {"Kayak", "Lifejacket", "Paddle", "Hat"}
-someNames := products[1:3]        #["Lifejacket", "Paddle"]
+someNames := products[1:3]        // <-- ["Lifejacket", "Paddle"]
 allNames := products[:]
 ```
 __Срезы__ `someNames` и `allNames` поддерживаются одним __массивом__ `products`
@@ -224,7 +224,7 @@ func main() {
     products := [4]string {"Kayak", "Lifejacket", "Paddle", "Hat"} 
 	allNames := products[1:]
 	someNames := []string {"Boots", "Canoe"}
-	copy(someNames[1:], allNames[2:3])           #копируемые элементы будут вставляться в позиции начаная с 1
+	copy(someNames[1:], allNames[2:3])           // <-- копируемые элементы будут вставляться в позиции начаная с 1
 
 	fmt.Println("someNames:", someNames)
 	fmt.Println("allNames:", allNames)
@@ -251,7 +251,7 @@ import "fmt"
 func main() {
     products := [4]string {"Kayak", "Lifejacket", "Paddle", "Hat"} 
 
-	deleted := append(products[:2], products[3:]...)       # append объединяет все элементы среза, кроме того, который надо удалить
+	deleted := append(products[:2], products[3:]...)       // <-- append объединяет все элементы среза, кроме того, который надо удалить
 
 	fmt.Println("Deleted:", deleted)
 }
@@ -283,8 +283,8 @@ import "fmt"
 
 func main() {
 	p1 :=  []string {"Kayak", "lifejacket", "Paddle", "Hat"}
-	arrayPtr := (*[3]string)(p1)        # перобразование типа среза
-	array := *arrayPtr                  # следование указателю
+	arrayPtr := (*[3]string)(p1)        // <-- перобразование типа среза
+	array := *arrayPtr                  // <-- следование указателю
 
 	fmt.Println(array)
 }

@@ -63,7 +63,7 @@ names := [3]string {"Kayak", "Lifejacket", "Paddle"}
 var otherArray := names
 ```
 
-Ссылки:
+Ссылки (__указатели__):
 ```
 names := [3]string {"Kayak", "Lifejacket", "Paddle"}
 var otherArray := &names

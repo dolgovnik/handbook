@@ -250,7 +250,7 @@ func ToCurrency(val float64) string {
 
 package main
 
-import "errors"
+import "errors"    // <-- встроенная функция для работы с ошибками
 
 type ChannelMessage struct {
 	Category string
@@ -267,7 +267,7 @@ func (slice ProductSlice) TotalPrice(category string) (total float64, err error)
 		}
 	}
 	if (productCount == 0) {
-	    err = errors.New("no such category")
+	    err = errors.New("no such category")     // <-- использование встроенной функции
 	}
 	return
 }
@@ -392,7 +392,7 @@ func main(){
 			    fmt.Println("Panic recovered")
 		    }
 	   }
-   }()                                   // <-- вызов анономной Ф
+   }()                                   // <-- вызов анонимной Ф
 
     var categories = []string { "Watersports", "Chess", "Running" } 
 
@@ -433,7 +433,7 @@ func main(){
        if arg := recover(); arg != nil {
 			if err, ok := arg.(error); ok {
 				fmt.Println("Error:", err.Error())
-				panic(err)
+				panic(err)                            // <-- вызов паники после обработки
 		    } else if str, ok := arg.(string); ok {
 		        fmt.Println("Message:", str )
 		    } else {
