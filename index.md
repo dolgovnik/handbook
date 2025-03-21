@@ -12,6 +12,7 @@
 * [[go/packages.md|Packages]]: All about packages
 * [[go/concurrency/concurrency.md|Concurrency]]: Info about Concurrency in Go
 * [[go/errors_handling.md|Errors]]: Errors Handling
+* [[go/context.md|Context]]: Context package 
 * [[go/std_lib/index.md|Standard Library]]: Стандартная библиотека, которую предоставляет __Go__
 * [[go/sensitive_shit.md|Sensitive Shit]]: Деликатная хрень
 * [[go/todo.md|TODO]]: Вещи с которыми надо разбираться подробней
